@@ -103,7 +103,7 @@ class CreditServiceTest {
         verify(exactly = 1) { creditRepository.findByCreditCode(creditCode) }
     }
 
-   /* @Test
+    @Test
     fun `should throw BusinessException for invalid credit code`() {
         //given
         val customerId: Long = 1L
