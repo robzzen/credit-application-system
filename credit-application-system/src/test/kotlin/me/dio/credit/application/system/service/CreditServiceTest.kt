@@ -54,7 +54,7 @@ class CreditServiceTest {
         Assertions.assertThat(actual).isSameAs(credit)
     }
 
-    /*@Test
+    @Test
     fun `should not create credit when invalid day first installment`() {
         //given
         val invalidDayFirstInstallment: LocalDate = LocalDate.now().plusMonths(5)
@@ -67,7 +67,7 @@ class CreditServiceTest {
             .hasMessage("Invalid Date")
         //then
         verify(exactly = 0) { creditRepository.save(any()) }
-    }*/
+    }
 
     @Test
     fun `should return list of credits for a customer`() {
@@ -114,10 +114,10 @@ class CreditServiceTest {
         //then
         Assertions.assertThatThrownBy { creditService.findByCreditCode(customerId, invalidCreditCode) }
             .isInstanceOf(BusinessException::class.java)
-            .hasMessage("Creditcode $invalidCreditCode not found")
+            .hasMessage("CreditCode $invalidCreditCode not found")
         //then
         verify(exactly = 1) { creditRepository.findByCreditCode(invalidCreditCode) }
-    }*/
+    }
 
   /*  @Test
     fun `should throw IllegalArgumentException for different customer ID`() {
