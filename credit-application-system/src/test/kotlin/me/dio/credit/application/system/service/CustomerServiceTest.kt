@@ -79,7 +79,7 @@ class CustomerServiceTest {
         verify(exactly = 1) { customerRepository.findById(fakeId) }
         verify(exactly = 1) { customerRepository.delete(fakeCustomer) }
     }
-    private fun buildCustomer(
+    companion object{ fun buildCustomer(
         firstName: String = "rob",
         lastName: String = "Cavalcante",
         cpf: String = "24964396010",
@@ -101,5 +101,5 @@ class CustomerServiceTest {
         ),
         income = income,
         id = id
-    )
+    )}
 }
