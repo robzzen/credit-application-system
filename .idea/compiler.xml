@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
-      <module name="credit-application-system.credit-application-system.main" target="17" />
-      <module name="credit-application-system.credit-application-system.test" target="17" />
+      <module name="credit-application-system.credit-application-system.main~1" target="17" />
+      <module name="credit-application-system.credit-application-system.test~1" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
