@@ -27,6 +27,7 @@ class CreditServiceTest {
 
     @BeforeEach
     fun setUp() {
+        //System.setProperty("net.bytebuddy.experimental", "true")
         MockKAnnotations.init(this)
         //creditService = CreditService(creditRepository, customerService)
     }
@@ -53,6 +54,7 @@ class CreditServiceTest {
         Assertions.assertThat(actual).isNotNull
         Assertions.assertThat(actual).isSameAs(credit)
     }
+
 
     @Test
     fun `should not create credit when invalid day first installment`() {
