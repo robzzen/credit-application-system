@@ -119,7 +119,7 @@ class CreditServiceTest {
         verify(exactly = 1) { creditRepository.findByCreditCode(invalidCreditCode) }
     }
 
-  /*  @Test
+    @Test
     fun `should throw IllegalArgumentException for different customer ID`() {
         //given
         val customerId: Long = 1L
@@ -131,10 +131,10 @@ class CreditServiceTest {
         //then
         Assertions.assertThatThrownBy { creditService.findByCreditCode(customerId, creditCode) }
             .isInstanceOf(IllegalArgumentException::class.java)
-            .hasMessage("Contact admin")
+            .hasMessage("Contact Admin")
 
         verify { creditRepository.findByCreditCode(creditCode) }
-    }*/
+    }
 
 
     companion object {
