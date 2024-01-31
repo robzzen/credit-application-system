@@ -20,7 +20,7 @@ import java.util.stream.Collectors
 
 @RestController
 @RequestMapping("/api/credits")
-class CreditResourse (
+class CreditResource (
     private val creditService: CreditService
 ){
 
@@ -47,4 +47,5 @@ class CreditResourse (
         val credit: Credit = this.creditService.findByCreditCode(customerId, creditCode)
         return ResponseEntity.status(HttpStatus.OK).body(CreditView(credit))
     }
+
 }
